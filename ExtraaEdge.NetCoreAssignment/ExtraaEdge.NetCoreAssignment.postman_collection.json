@@ -1,0 +1,909 @@
+{
+	"info": {
+		"_postman_id": "4285ad61-2740-471c-b340-5c8a4b56dcad",
+		"name": "ExtraaEdge.NetCoreAssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40624011"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iPhone 14\",\r\n    \"brandId\": 1,\r\n    \"price\": 999.99,\r\n    \"createdAt\": \"2024-01-01T00:00:00\",\r\n    \"updatedAt\": \"2024-01-01T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5149/Product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"iPhone 14\",\r\n    \"brandId\": 1,\r\n    \"price\": 999.99,\r\n    \"createdAt\": \"2024-01-01T00:00:00\",\r\n    \"updatedAt\": \"2024-01-01T00:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5149/Product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5149",
+									"path": [
+										"Product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Dec 2024 14:52:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://localhost:5149/Product/4"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 4,\n    \"name\": \"iPhone 14\",\n    \"price\": 999.99,\n    \"createdAt\": \"2024-01-01T00:00:00\",\n    \"updatedAt\": \"2024-01-01T00:00:00\",\n    \"brandId\": 1,\n    \"brand\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5149/Product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllProduct",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5149/Product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5149",
+									"path": [
+										"Product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Dec 2024 14:41:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Samsung Galaxy S23\",\n        \"price\": 799.99,\n        \"createdAt\": \"2024-12-24T19:45:01.197\",\n        \"updatedAt\": \"2024-12-24T19:45:01.197\",\n        \"brandId\": 1,\n        \"brand\": {\n            \"brandId\": 1,\n            \"name\": \"Samsung\"\n        }\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"iPhone 15\",\n        \"price\": 999.99,\n        \"createdAt\": \"2024-12-24T19:45:01.197\",\n        \"updatedAt\": \"2024-12-24T19:45:01.197\",\n        \"brandId\": 2,\n        \"brand\": {\n            \"brandId\": 2,\n            \"name\": \"Apple\"\n        }\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"OnePlus 11\",\n        \"price\": 749.99,\n        \"createdAt\": \"2024-12-24T19:45:01.197\",\n        \"updatedAt\": \"2024-12-24T19:45:01.197\",\n        \"brandId\": 3,\n        \"brand\": {\n            \"brandId\": 3,\n            \"name\": \"OnePlus\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5149/Product/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5149/Product/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5149",
+									"path": [
+										"Product",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Dec 2024 14:43:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 2,\n    \"name\": \"iPhone 15\",\n    \"price\": 999.99,\n    \"createdAt\": \"2024-12-24T19:45:01.197\",\n    \"updatedAt\": \"2024-12-24T19:45:01.197\",\n    \"brandId\": 2,\n    \"brand\": {\n        \"brandId\": 2,\n        \"name\": \"Apple\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 4,\r\n    \"name\": \"iPhone 14 Pro\",\r\n    \"brandId\": 1,\r\n    \"price\": 1099.99,\r\n    \"createdAt\": \"2024-01-01T00:00:00\",\r\n    \"updatedAt\": \"2024-02-01T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5149/Product/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5149/Product/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BulkAdd",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Samsung Galaxy S23\",\r\n        \"brandId\": 2,\r\n        \"price\": 799.99,\r\n        \"createdAt\": \"2024-01-01T00:00:00\",\r\n        \"updatedAt\": \"2024-01-01T00:00:00\"\r\n    },\r\n    {\r\n        \"name\": \"Pixel 7\",\r\n        \"brandId\": 3,\r\n        \"price\": 599.99,\r\n        \"createdAt\": \"2024-01-01T00:00:00\",\r\n        \"updatedAt\": \"2024-01-01T00:00:00\"\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5149/Product/bulk-insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product",
+								"bulk-insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BulkUpdate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"productId\": 1,\r\n        \"name\": \"iPhone 14 Pro Max\",\r\n        \"brandId\": 1,\r\n        \"price\": 1199.99,\r\n        \"createdAt\": \"2024-01-01T00:00:00\",\r\n        \"updatedAt\": \"2024-02-01T00:00:00\"\r\n    },\r\n    {\r\n        \"productId\": 2,\r\n        \"name\": \"Samsung Galaxy S23 Ultra\",\r\n        \"brandId\": 2,\r\n        \"price\": 999.99,\r\n        \"createdAt\": \"2024-01-01T00:00:00\",\r\n        \"updatedAt\": \"2024-02-01T00:00:00\"\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5149/Product/bulk-update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product",
+								"bulk-update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "monthly-sales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5149/Product/monthly-sales?fromDate=2024-01-01&toDate=2024-12-31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product",
+								"monthly-sales"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "toDate",
+									"value": "2024-12-31"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5149/Product/monthly-sales?fromDate=2024-01-01&toDate=2024-12-31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5149",
+									"path": [
+										"Product",
+										"monthly-sales"
+									],
+									"query": [
+										{
+											"key": "fromDate",
+											"value": "2024-01-01"
+										},
+										{
+											"key": "toDate",
+											"value": "2024-12-31"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Dec 2024 16:08:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"saleId\": 1,\n        \"saleDate\": \"2024-12-24T00:00:00\",\n        \"quantity\": 2,\n        \"totalAmount\": 1599.98,\n        \"productId\": 1,\n        \"product\": {\n            \"productId\": 1,\n            \"name\": \"iPhone 14 Pro Max\",\n            \"price\": 1199.99,\n            \"createdAt\": \"2024-01-01T00:00:00\",\n            \"updatedAt\": \"2024-02-01T00:00:00\",\n            \"brandId\": 1,\n            \"brand\": null\n        },\n        \"discountId\": 1,\n        \"discount\": null\n    },\n    {\n        \"saleId\": 2,\n        \"saleDate\": \"2024-12-24T00:00:00\",\n        \"quantity\": 1,\n        \"totalAmount\": 949.99,\n        \"productId\": 2,\n        \"product\": {\n            \"productId\": 2,\n            \"name\": \"Samsung Galaxy S23 Ultra\",\n            \"price\": 999.99,\n            \"createdAt\": \"2024-01-01T00:00:00\",\n            \"updatedAt\": \"2024-02-01T00:00:00\",\n            \"brandId\": 2,\n            \"brand\": null\n        },\n        \"discountId\": 2,\n        \"discount\": null\n    },\n    {\n        \"saleId\": 3,\n        \"saleDate\": \"2024-12-24T00:00:00\",\n        \"quantity\": 3,\n        \"totalAmount\": 1912.47,\n        \"productId\": 3,\n        \"product\": {\n            \"productId\": 3,\n            \"name\": \"OnePlus 11\",\n            \"price\": 749.99,\n            \"createdAt\": \"2024-12-24T19:45:01.197\",\n            \"updatedAt\": \"2024-12-24T19:45:01.197\",\n            \"brandId\": 3,\n            \"brand\": null\n        },\n        \"discountId\": 3,\n        \"discount\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "brand-sales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5149/Product/brand-sales?fromDate=2024-01-01&toDate=2024-12-31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product",
+								"brand-sales"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "toDate",
+									"value": "2024-12-31"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "brand-sales",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5149/Product/brand-sales?fromDate=2024-01-01&toDate=2024-12-31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5149",
+									"path": [
+										"Product",
+										"brand-sales"
+									],
+									"query": [
+										{
+											"key": "fromDate",
+											"value": "2024-01-01"
+										},
+										{
+											"key": "toDate",
+											"value": "2024-12-31"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Dec 2024 15:58:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    [\n        {\n            \"saleId\": 1,\n            \"saleDate\": \"2024-12-24T00:00:00\",\n            \"quantity\": 2,\n            \"totalAmount\": 1599.98,\n            \"productId\": 1,\n            \"product\": {\n                \"productId\": 1,\n                \"name\": \"iPhone 14 Pro Max\",\n                \"price\": 1199.99,\n                \"createdAt\": \"2024-01-01T00:00:00\",\n                \"updatedAt\": \"2024-02-01T00:00:00\",\n                \"brandId\": 1,\n                \"brand\": {\n                    \"brandId\": 1,\n                    \"name\": \"Samsung\"\n                }\n            },\n            \"discountId\": 1,\n            \"discount\": null\n        }\n    ],\n    [\n        {\n            \"saleId\": 2,\n            \"saleDate\": \"2024-12-24T00:00:00\",\n            \"quantity\": 1,\n            \"totalAmount\": 949.99,\n            \"productId\": 2,\n            \"product\": {\n                \"productId\": 2,\n                \"name\": \"Samsung Galaxy S23 Ultra\",\n                \"price\": 999.99,\n                \"createdAt\": \"2024-01-01T00:00:00\",\n                \"updatedAt\": \"2024-02-01T00:00:00\",\n                \"brandId\": 2,\n                \"brand\": {\n                    \"brandId\": 2,\n                    \"name\": \"Apple\"\n                }\n            },\n            \"discountId\": 2,\n            \"discount\": null\n        }\n    ],\n    [\n        {\n            \"saleId\": 3,\n            \"saleDate\": \"2024-12-24T00:00:00\",\n            \"quantity\": 3,\n            \"totalAmount\": 1912.47,\n            \"productId\": 3,\n            \"product\": {\n                \"productId\": 3,\n                \"name\": \"OnePlus 11\",\n                \"price\": 749.99,\n                \"createdAt\": \"2024-12-24T19:45:01.197\",\n                \"updatedAt\": \"2024-12-24T19:45:01.197\",\n                \"brandId\": 3,\n                \"brand\": {\n                    \"brandId\": 3,\n                    \"name\": \"OnePlus\"\n                }\n            },\n            \"discountId\": 3,\n            \"discount\": null\n        }\n    ]\n]"
+						},
+						{
+							"name": "brand-sales",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5149/Product/brand-sales?fromDate=2024-01-01&toDate=2024-12-31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5149",
+									"path": [
+										"Product",
+										"brand-sales"
+									],
+									"query": [
+										{
+											"key": "fromDate",
+											"value": "2024-01-01"
+										},
+										{
+											"key": "toDate",
+											"value": "2024-12-31"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Dec 2024 15:58:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    [\n        {\n            \"saleId\": 1,\n            \"saleDate\": \"2024-12-24T00:00:00\",\n            \"quantity\": 2,\n            \"totalAmount\": 1599.98,\n            \"productId\": 1,\n            \"product\": {\n                \"productId\": 1,\n                \"name\": \"iPhone 14 Pro Max\",\n                \"price\": 1199.99,\n                \"createdAt\": \"2024-01-01T00:00:00\",\n                \"updatedAt\": \"2024-02-01T00:00:00\",\n                \"brandId\": 1,\n                \"brand\": {\n                    \"brandId\": 1,\n                    \"name\": \"Samsung\"\n                }\n            },\n            \"discountId\": 1,\n            \"discount\": null\n        }\n    ],\n    [\n        {\n            \"saleId\": 2,\n            \"saleDate\": \"2024-12-24T00:00:00\",\n            \"quantity\": 1,\n            \"totalAmount\": 949.99,\n            \"productId\": 2,\n            \"product\": {\n                \"productId\": 2,\n                \"name\": \"Samsung Galaxy S23 Ultra\",\n                \"price\": 999.99,\n                \"createdAt\": \"2024-01-01T00:00:00\",\n                \"updatedAt\": \"2024-02-01T00:00:00\",\n                \"brandId\": 2,\n                \"brand\": {\n                    \"brandId\": 2,\n                    \"name\": \"Apple\"\n                }\n            },\n            \"discountId\": 2,\n            \"discount\": null\n        }\n    ],\n    [\n        {\n            \"saleId\": 3,\n            \"saleDate\": \"2024-12-24T00:00:00\",\n            \"quantity\": 3,\n            \"totalAmount\": 1912.47,\n            \"productId\": 3,\n            \"product\": {\n                \"productId\": 3,\n                \"name\": \"OnePlus 11\",\n                \"price\": 749.99,\n                \"createdAt\": \"2024-12-24T19:45:01.197\",\n                \"updatedAt\": \"2024-12-24T19:45:01.197\",\n                \"brandId\": 3,\n                \"brand\": {\n                    \"brandId\": 3,\n                    \"name\": \"OnePlus\"\n                }\n            },\n            \"discountId\": 3,\n            \"discount\": null\n        }\n    ]\n]"
+						}
+					]
+				},
+				{
+					"name": "profit-loss",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5149/Product/profit-loss?fromDate=2024-01-01&toDate=2024-12-31&compareWith=2023-12-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product",
+								"profit-loss"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "toDate",
+									"value": "2024-12-31"
+								},
+								{
+									"key": "compareWith",
+									"value": "2023-12-01"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5149/Product/profit-loss?fromDate=2024-01-01&toDate=2024-12-31&compareWith=2023-12-01",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5149",
+									"path": [
+										"Product",
+										"profit-loss"
+									],
+									"query": [
+										{
+											"key": "fromDate",
+											"value": "2024-01-01"
+										},
+										{
+											"key": "toDate",
+											"value": "2024-12-31"
+										},
+										{
+											"key": "compareWith",
+											"value": "2023-12-01"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Dec 2024 16:14:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "4462.44"
+						}
+					]
+				},
+				{
+					"name": "best-price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5149/Product/1/best-price",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Product",
+								"1",
+								"best-price"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5149/Product/1/best-price",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5149",
+									"path": [
+										"Product",
+										"1",
+										"best-price"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Dec 2024 16:18:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "799.99"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2FsZXNwZXJzb24iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTYWxlcyIsImV4cCI6MTczNTA3MTQzMiwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.V42uHE2iFKOc4D79hB-o4MKTPTKqTaxr7zepKUlBLJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Username\" : \"salesperson\",\r\n\"PasswordHash\":\"hashedpassword456\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5149/Auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5149",
+							"path": [
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"Username\" : \"admin\",\r\n\"PasswordHash\":\"hashedpassword123\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5149/Auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5149",
+									"path": [
+										"Auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Dec 2024 17:53:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTczNTA2OTk2OCwiaXNzIjoiTW9iaWxlU3RvcmVBUEkiLCJhdWQiOiJNb2JpbGVTdG9yZUFQSSJ9.HKFru1Z-r3mA5ud9rshiUYIYHYDqZD9YjyremDoPidM\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
