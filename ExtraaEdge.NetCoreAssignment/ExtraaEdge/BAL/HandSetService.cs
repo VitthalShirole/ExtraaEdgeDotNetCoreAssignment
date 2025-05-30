@@ -20,11 +20,11 @@ namespace ExtraaEdge.BAL
         {
             var result = new JsonObject();
 
-            var emp = new HandSet();
-            emp.Name = handSet.Name;
+            var hand = new HandSet();
+            hand.Name = handSet.Name;
 
 
-            new HandSetRepository(dbContext).Add(emp);
+            new HandSetRepository(dbContext).Add(hand);
 
             return result;
         }
